@@ -66,9 +66,9 @@ export default defineNuxtConfig({
       fileUploadTokenService: process.env.FILE_UPLOAD_SERVICE || "netlify", // "netlify" or "vercel" (or leave empty for no file uploads)
       getPostsLimit: 30, // number of posts to fetch from Orbis in the getPosts() function
       governanceUrl: "", // governance url (snapshot, Tally, etc.)
-      iggyPostAddress: "",
-      iggyPostMinterAddress: "",
-      iggyPostStatsAddress: "",
+      iggyPostAddress: "0x2F103ec022a1d99291077a082b2DC24C734E58A3",
+      iggyPostMinterAddress: "0xF40284a811c82b4B9ab22E94Bb909Df6d2c66C08",
+      iggyPostStatsAddress: "0x99Dbf11aCd46baFBCE82506FaeB4F13E6Ea1726A",
       ipfsGateway: "https://cloudflare-ipfs.com/ipfs/",
       keysAddress: "", // FriendKeys contract address 
       keysContext: "kjzl6cwe1jw14a1w5ewbm5prdj6qlo17y6mphrbzti3s99ocevjkxp7v68ngnuk",
@@ -125,7 +125,7 @@ export default defineNuxtConfig({
         "governance": false,
         "newsletter": false, 
         "nftLaunchpad": false, 
-        "randomMintedPosts": false, 
+        "randomMintedPosts": true, 
         "swap": false, 
         "stake": false, 
         "sendTokens": true, 
