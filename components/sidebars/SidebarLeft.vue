@@ -27,13 +27,14 @@
           -->
 
           <!-- Activity Points -->
-          <button 
-            v-if="userStore.getCurentUserActivityPoints > 0 && $config.activityPointsAddress" 
-            class="btn btn-outline-primary btn-sm mt-2 mb-2" 
-            @click="fetchActivityPoints"
-          >
-            {{ userStore.getCurentUserActivityPoints }} AP
-          </button>
+          <div v-if="$config.activityPointsAddress" class="mt-2">
+            <NuxtLink 
+              to="/activity-points"
+              class="btn btn-outline-primary btn-sm mt-2 mb-2"
+            >
+              {{ getUserAp }} AP
+            </NuxtLink>
+          </div>
 
           <hr />
         </div>
@@ -226,6 +227,13 @@ export default {
   },
 
   computed: {
+    getUserAp() {
+      if (this.userStore.getCurentUserActivityPoints > 0) {
+        return this.userStore.getCurentUserActivityPoints;
+      } else {
+        return 0;
+      }
+    },
 
     filteredCategories() {
       let cats = [];
