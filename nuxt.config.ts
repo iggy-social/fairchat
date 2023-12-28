@@ -98,15 +98,15 @@ export default defineNuxtConfig({
       orbisContext: "kjzl6cwe1jw1474bxzeu4oqgpp4hcn0b2haaerv8t6eenc367swjp4iskru712y", // production context
       orbisTest: false, // if true, test context will be used instead of the production one
       orbisTestContext: "kjzl6cwe1jw145tfqv2eqv8tiz6puo27meyz4smz40atppuc13tulqca87k35z2", // test context
-      previewImage: "/img/covers/cover.svg",
-      previewImageAirdrop: "/img/covers/cover-airdrop.svg",
-      previewImageNftCollection: "/img/covers/cover-nft-collection.svg",
-      previewImageNftCreate: "/img/covers/cover-nft-create.svg",
-      previewImageNftLaunchpad: "/img/covers/cover-nft-launchpad.svg",
-      previewImagePost: "/img/covers/cover-post.svg",
-      previewImagePostNft: "/img/covers/cover-post-nft.svg",
-      previewImageProfile: "/img/covers/cover-profile.svg",
-      previewImageStake: "/img/covers/cover-stake.svg",
+      previewImage: "/img/covers/cover.png",
+      previewImageAirdrop: "/img/covers/cover-airdrop.png",
+      previewImageNftCollection: "/img/covers/cover-nft-collection.png",
+      previewImageNftCreate: "/img/covers/cover-nft-create.png",
+      previewImageNftLaunchpad: "/img/covers/cover-nft-launchpad.png",
+      previewImagePost: "/img/covers/cover-post.png",
+      previewImagePostNft: "/img/covers/cover-post-nft.png",
+      previewImageProfile: "/img/covers/cover-profile.png",
+      previewImageStake: "/img/covers/cover-stake.png",
       profileMintedPostIdsMax: 36, // max number of minted post ids to show in the profile page
       projectMetadataTitle: "Fairchat.xyz | Web3 Social on ZKFair",
       projectName: "Fairchat",
@@ -128,7 +128,7 @@ export default defineNuxtConfig({
         "randomMintedPosts": false, 
         "swap": false, 
         "stake": false, 
-        "sendTokens": false, 
+        "sendTokens": true, 
         "spotify": false
       }, 
       showRepliesOnHomepage: true, // show replies on the homepage  
