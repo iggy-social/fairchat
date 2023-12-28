@@ -35,7 +35,7 @@
       <h5>Useful links</h5>
 
       <ul>
-        <li><a href="https://github.com/iggy-social" target="_blank">Iggy Social GitHub</a></li>
+        <li><a href="https://github.com/iggy-social/fairchat" target="_blank">Fairchat GitHub</a></li>
         <li><a href="https://github.com/punk-domains" target="_blank">Punk Domains GitHub</a></li>
         <li><a href="https://discord.gg/8dSrwrAQeu" target="_blank">Discord</a></li>
       </ul>
