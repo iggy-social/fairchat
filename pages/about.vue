@@ -13,7 +13,7 @@
       <h3 class="mb-3 mt-3">Web3 Social is here.</h3>
 
       <p class="text-break mt-3">
-        Iggy Social Demo is showcase of an open-source template that anyone can use to build their own web3 social app.
+        Fairchat is the first decentralized social media chat on the ZKFair L2 blockchain.
       </p>
 
       <p class="text-break mt-3">
@@ -28,7 +28,8 @@
 
       <p class="text-break mt-3">
         Brought to you by the 
-        <a target="_blank" href="https://punk.domains">Punk Domains</a> team.
+        <a target="_blank" href="https://punk.domains">Punk Domains</a> and
+        <a target="_blank" href="https://iggy.social">Iggy Social</a> team.
       </p>
 
       <h5>Useful links</h5>

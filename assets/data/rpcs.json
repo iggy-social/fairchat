@@ -11,6 +11,7 @@
   "592": "https://astar.public.blastapi.io",
   "1284": "https://rpc.ankr.com/moonbeam",
   "42161": "https://rpc.ankr.com/arbitrum",
+  "42766": "https://rpc.zkfair.io",
   "43114": "https://rpc.ankr.com/avalanche",
   "80001": "https://polygon-testnet.public.blastapi.io"
 }

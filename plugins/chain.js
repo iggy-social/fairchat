@@ -7,6 +7,8 @@ export default defineNuxtPlugin(() => {
   function getChainName(chainId) {
     if (chainId === 1) {
       return "Ethereum";
+    } else if (chainId === 42766) {
+      return "ZKFair";
     } else if (chainId === 10) {
       return "Optimism";
     } else if (chainId === 14) {
@@ -76,6 +78,16 @@ export default defineNuxtPlugin(() => {
     if (networkName == "Ethereum") {
       method = "wallet_switchEthereumChain"
       params = [{ chainId: "0x1" }] 
+    } else if (networkName == "ZKFair") {
+      networkId = 42766;
+      method = "wallet_addEthereumChain"
+      params = [{ 
+        blockExplorerUrls: [ "https://scan.zkfair.io/" ],
+        chainId: ethers.utils.hexValue(networkId),
+        chainName: "ZKFair",
+        nativeCurrency: { decimals: 18, name: "USDC", symbol: "USDC" }, 
+        rpcUrls: [getRpcs2()[networkId]]
+      }] 
     } else if (networkName == "Polygon Testnet") {
       networkId = 80001;
       method = "wallet_addEthereumChain"

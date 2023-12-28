@@ -1,5 +1,5 @@
 {
-  "name": "iggy-social-frontend",
+  "name": "fairchat",
   "private": true,
   "scripts": {
     "build": "nuxt build",
