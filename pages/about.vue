@@ -6,8 +6,8 @@
 
   <div class="card border scroll-500">
     <div class="card-body">
-      <p class="fs-3" @click="$router.back()">
-        <i class="bi bi-arrow-left-circle cursor-pointer"></i>
+      <p class="fs-3">
+        <i class="bi bi-arrow-left-circle cursor-pointer" @click="$router.back()"></i>
       </p>
 
       <h3 class="mb-3 mt-3">Web3 Social is here.</h3>

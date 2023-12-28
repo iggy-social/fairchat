@@ -54,6 +54,15 @@
             </NuxtLink>
           </ul>
 
+          <ul class="list-group">
+            <NuxtLink 
+              to="/shill"
+              class="list-group-item cursor-pointer hover-color bg-light border-0" 
+            >
+              Shill and discuss projects
+            </NuxtLink>
+          </ul>
+
           <hr />
 
           <!-- Home 
@@ -98,6 +107,14 @@
               <i class="bi bi-award"></i> Activity Points
             </NuxtLink>
           </li>
+
+          <!-- Shill 
+          <li class="nav-item p-1" @click="closeLeftSidebar">
+            <NuxtLink class="nav-link" :class="$route.path.startsWith('/shill') ? 'active' : ''" aria-current="page" to="/shill">
+              <i class="bi bi-megaphone"></i> Shill projects
+            </NuxtLink>
+          </li>
+          -->
 
           <!-- Send tokens -->
           <li class="nav-item p-1" @click="closeLeftSidebar" v-if="$config.showFeatures.sendTokens">

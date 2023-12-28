@@ -6,8 +6,8 @@
 
   <div class="card border">
     <div class="card-body">
-      <p class="fs-3" @click="$router.back()">
-        <i class="bi bi-arrow-left-circle cursor-pointer"></i>
+      <p class="fs-3">
+        <i class="bi bi-arrow-left-circle cursor-pointer" @click="$router.back()"></i>
       </p>
 
       <h3 class="mb-2 mt-3 text-center">Get a Friend Key and unlock a chat room</h3>

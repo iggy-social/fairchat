@@ -16,8 +16,8 @@
     <!-- Minted Post Image -->
     <div class="card mb-3 border scroll-500" v-if="image">
       <div class="card-body row">
-        <p class="fs-3" @click="$router.back()">
-          <i class="bi bi-arrow-left-circle cursor-pointer"></i>
+        <p class="fs-3">
+          <i class="bi bi-arrow-left-circle cursor-pointer" @click="$router.back()"></i>
         </p>
 
         <div class="col-sm-12 col-md-6 offset-md-3 mb-3">
