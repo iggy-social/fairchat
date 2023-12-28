@@ -50,7 +50,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      activityPointsAddress: "",
+      activityPointsAddress: "0xc486B08Ed47fFe5c1b4b1A2ff5c671EA0083D9bA",
       airdropApAddress: "", // chat token claim for APs
       airdropClaimDomainsAddress: "", // chat token claim for domain holders
       blockExplorerBaseUrl: "https://scan.zkfair.io",
@@ -119,7 +119,7 @@ export default defineNuxtConfig({
       randomPostsNumber: 1, // number of random post NFTs to show in the sidebar widget
       rpcCustom: process.env.RPC_CUSTOM || "", // Custom RPC URL
       showFeatures: { // show/hide features in sidebars (if you have too many "true", make the sidebar scrollable --> sidebarLeftSticky: false)
-        "activityPoints": false, 
+        "activityPoints": true, 
         "airdrop": false, 
         "friendKeys": false, 
         "governance": false,
