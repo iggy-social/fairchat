@@ -76,9 +76,9 @@ export default defineNuxtConfig({
       linkPreviews: process.env.LINK_PREVIEW_SERVICE || "netlify", // "netlify", "vercel", or "microlink" (or leave empty for no link previews)
       lpTokenAddress: "", // liquidity pool token (token to stake in the staking contract)
       lpTokenSymbol: "LP tokens", // LP token symbol
-      marketplacePostNftUrl: "https://testnets.opensea.io/assets/mumbai/0x63FE8216a66737CFE474DF3949F9081EbD4Bd800",
-      marketplacePostNftItemUrl: "https://testnets.opensea.io/assets/mumbai/0x63FE8216a66737CFE474DF3949F9081EbD4Bd800/", // url (append nft id to it)
-      marketplaceNftCollectionBaseUrl: "https://testnets.opensea.io/assets/mumbai/", // url (append nft address to it)
+      marketplacePostNftUrl: "https://alienswap.xyz/assets/zkfair/0x2F103ec022a1d99291077a082b2DC24C734E58A3",
+      marketplacePostNftItemUrl: "https://alienswap.xyz/assets/zkfair/0x2F103ec022a1d99291077a082b2DC24C734E58A3/", // url (append nft id to it)
+      marketplaceNftCollectionBaseUrl: "https://alienswap.xyz/assets/zkfair/", // url (append nft address to it)
       newsletterLink: "",
       nftDefaultRatio: 1, // default ratio for the NFT price bonding curve
       nftLaunchpadBondingAddress: "", // NFT launchpad with bonding curve contract address
