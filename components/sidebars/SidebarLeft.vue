@@ -59,7 +59,7 @@
               to="/shill"
               class="list-group-item cursor-pointer hover-color bg-light border-0" 
             >
-              Shill and discuss projects
+              Shill & discuss projects
             </NuxtLink>
           </ul>
 

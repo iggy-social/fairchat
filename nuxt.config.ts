@@ -70,7 +70,7 @@ export default defineNuxtConfig({
       iggyPostMinterAddress: "0xF40284a811c82b4B9ab22E94Bb909Df6d2c66C08",
       iggyPostStatsAddress: "0x99Dbf11aCd46baFBCE82506FaeB4F13E6Ea1726A",
       ipfsGateway: "https://cloudflare-ipfs.com/ipfs/",
-      keysAddress: "", // FriendKeys contract address 
+      keysAddress: "0x1EB2Adc19eB3Df26D84427Be11F1eB1887c6631c", // FriendKeys contract address 
       keysContext: "kjzl6cwe1jw14a1w5ewbm5prdj6qlo17y6mphrbzti3s99ocevjkxp7v68ngnuk",
       keysFeatured: ["tempe", "tekr"],
       linkPreviews: process.env.LINK_PREVIEW_SERVICE || "netlify", // "netlify", "vercel", or "microlink" (or leave empty for no link previews)
@@ -81,7 +81,7 @@ export default defineNuxtConfig({
       marketplaceNftCollectionBaseUrl: "https://alienswap.xyz/assets/zkfair/", // url (append nft address to it)
       newsletterLink: "",
       nftDefaultRatio: 1, // default ratio for the NFT price bonding curve
-      nftLaunchpadBondingAddress: "", // NFT launchpad with bonding curve contract address
+      nftLaunchpadBondingAddress: "0x50045895e1983F39FDC149C9a5AC29C39BEA18fe", // NFT launchpad with bonding curve contract address
       nftLaunchpadLatestItems: 4, // number of latest NFTs to show in the NFT launchpad
       nftOrbisContext: "kjzl6cwe1jw146mnsaga8lpmyawk4j6zkatzokh2mimohwpbv0akwnr5jp9xybm", // Orbis context for NFT collection pages
       orbisCategories: [ // use only alphanumeric ASCII characters for slugs! (no spaces, only dash is allowed)
