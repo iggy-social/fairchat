@@ -60,7 +60,7 @@
               class="list-group-item cursor-pointer hover-color bg-light border-0" 
               :class="$route.path.startsWith('/memes-nfts') ? 'active' : ''"
             >
-              Memes & NFTs
+              Share images & NFTs
             </NuxtLink>
           </ul>
 
