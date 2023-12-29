@@ -52,6 +52,7 @@ import { useToast } from "vue-toastification/dist/index.mjs";
 import WaitingToast from "~/components/WaitingToast";
 import sanitizeHtml from 'sanitize-html';
 import { useUserStore } from '~/store/user';
+import { fetchReferrer } from '~/utils/storageUtils';
 import { getImageFromText, textLengthWithoutBlankCharacters } from '~/utils/textUtils';
 
 export default {
@@ -161,7 +162,7 @@ export default {
             this.post.stream_id, // post ID
             this.post.creator_details.metadata.address, // post author
             this.address, // NFT receiver
-            ethers.constants.AddressZero, // @todo: enable referrals
+            fetchReferrer(window), // referrer
             String(this.textPreview), // text preview
             String(this.textImage),
             this.quantity,

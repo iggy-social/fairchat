@@ -6,6 +6,8 @@
       <!-- Mint/register a domain name -->
       <NameMintWidget />
 
+      <ReferralWidget />
+
       <!-- Playlist -->
       <div class="card m-2 bg-light" v-if="$config.showFeatures.spotify">
         <div class="card-header bg-light">{{ $config.projectName }} Playlist</div>
@@ -51,6 +53,7 @@ import MintedPostsWidget from '~/components/minted-posts/MintedPostsWidget.vue';
 import NameMintWidget from '~/components/names/NameMintWidget.vue';
 import SimpleSwapWidget from '~/components/swap/SimpleSwapWidget.vue';
 import KeysListWidget from '~/components/keys/KeysListWidget.vue';
+import ReferralWidget from '~/components/referrals/ReferralWidget.vue';
 
 export default {
     name: "SidebarRight",
@@ -60,6 +63,7 @@ export default {
       KeysListWidget,
       MintedPostsWidget,
       NameMintWidget,
+      ReferralWidget,
       SimpleSwapWidget
     },
 

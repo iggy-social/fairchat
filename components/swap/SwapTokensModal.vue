@@ -52,6 +52,7 @@ import { useEthers } from 'vue-dapp';
 import { useToast } from "vue-toastification/dist/index.mjs";
 import wrappedNativeTokens from "~/assets/data/wrappedNativeTokens.json";
 import { swapTokens } from '~/utils/simpleSwapUtils';
+import { fetchReferrer } from '~/utils/storageUtils';
 import WaitingToast from "~/components/WaitingToast";
 import { useSiteStore } from '~/store/site';
 
@@ -131,7 +132,7 @@ export default {
           inputTokenAmountWei,
           this.outputTokenAmountWei,
           this.routerAddress,
-          ethers.constants.AddressZero // TODO: referrer address
+          fetchReferrer(window)
         );
 
         const toastWait = this.toast(
