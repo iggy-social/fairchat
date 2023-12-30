@@ -34,9 +34,22 @@
       </div>
       </div>
 
-      <p class="text-break mt-4 mb-3">
+      <!--
+      <p class="text-break mt-4">
         By actively using {{ $config.projectName }} features, you can earn more Activity Points.
       </p>
+      -->
+
+      <div class="mt-4 mb-3">
+        <span>How to earn more Activity Points:</span>
+
+        <ul>
+          <li>Mint .fairchat domains</li>
+          <li>Mint posts as NFTs</li>
+          <li>Invite others to {{ $config.projectName }} using referral links</li>
+          <li>Other kinds of earning APs are coming soon, stay tuned!</li>
+        </ul>
+      </div>
 
       <hr />
 
