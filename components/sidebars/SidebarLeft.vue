@@ -58,7 +58,8 @@
             <NuxtLink 
               to="/memes-nfts"
               class="list-group-item cursor-pointer hover-color bg-light border-0" 
-              :class="$route.path.startsWith('/memes-nfts') ? 'active' : ''"
+              :class="$route.path.startsWith('/memes-nfts') ? 'active' : ''" 
+              @click="closeLeftSidebar"
             >
               Share images & NFTs
             </NuxtLink>
@@ -68,7 +69,8 @@
             <NuxtLink 
               to="/shill"
               class="list-group-item cursor-pointer hover-color bg-light border-0" 
-              :class="$route.path.startsWith('/shill') ? 'active' : ''"
+              :class="$route.path.startsWith('/shill') ? 'active' : ''" 
+              @click="closeLeftSidebar" 
             >
               Shill & discuss projects
             </NuxtLink>
