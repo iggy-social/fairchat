@@ -6,6 +6,13 @@
       <!-- Mint/register a domain name -->
       <NameMintWidget />
 
+      <!-- Swap tokens -->
+      <SimpleSwapWidget 
+        v-if="$config.swapRouterAddress && $config.showFeatures.swap" 
+        :routerAddress="$config.swapRouterAddress" 
+        :tokens="tokens" 
+        title="Swap tokens" />
+
       <ReferralWidget />
 
       <!-- Playlist -->
@@ -19,13 +26,6 @@
       <!-- Keys list 
       <KeysListWidget v-if="$config.keysAddress && $config.showFeatures.friendKeys" />
       -->
-
-      <!-- Swap tokens -->
-      <SimpleSwapWidget 
-        v-if="$config.swapRouterAddress && $config.showFeatures.swap" 
-        :routerAddress="$config.swapRouterAddress" 
-        :tokens="tokens" 
-        title="Swap tokens" />
 
       <!-- Random minted post(s) -->
       <MintedPostsWidget v-if="$config.showFeatures.randomMintedPosts" @closeRightSidebar="closeRightSidebar" />
