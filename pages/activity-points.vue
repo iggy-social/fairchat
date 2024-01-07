@@ -46,8 +46,9 @@
         <ul>
           <li>Mint .fairchat domains</li>
           <li>Swap tokens (when receiving token is USDC)</li>
-          <li>Mint posts as NFTs</li>
+          <li>Mint posts</li>
           <li>Invite others to {{ $config.projectName }} using referral links</li>
+          <li>Launch and mint NFTs via the NFT Launchpad</li>
           <li>Other kinds of earning APs are coming soon, stay tuned!</li>
         </ul>
       </div>
