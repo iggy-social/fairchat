@@ -26,7 +26,7 @@
       </div>
 
       <p class="mb-4" v-if="createPrice">
-        Price for creating a collection is {{ createPrice }} {{ $config.tokenSymbol }}.
+        Price for creating a collection is {{ createPrice }} {{ $config.tokenSymbol }} (+ gas fees which are currently around $16).
       </p>
 
       <!-- Collection Name -->
