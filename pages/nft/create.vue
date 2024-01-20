@@ -127,16 +127,25 @@
       <div class="d-flex justify-content-center mt-5 mb-5">
 
         <!-- Create Collection button -->
-        <button 
-          :disabled="waitingCreate || !fieldsValid"
-          v-if="isActivated && !launchpadPaused"
-          class="btn btn-primary" 
-          type="button"
-          @click="createCollection" 
-        >
-          <span v-if="waitingData || waitingCreate" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-          Create NFT Collection for {{ createPrice }} {{ $config.tokenSymbol }}
-        </button>
+        <div v-if="isActivated && !launchpadPaused">
+          <button 
+            :disabled="waitingCreate || !fieldsValid"
+            v-if="isActivated && !launchpadPaused"
+            class="btn btn-primary" 
+            type="button"
+            @click="createCollection" 
+          >
+            <span v-if="waitingData || waitingCreate" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Create NFT Collection for {{ createPrice }} {{ $config.tokenSymbol }}
+          </button>
+
+          <p v-if="isActivated && !launchpadPaused" class="text-center mt-1">
+            <small>
+              <em>(+ gas fees of around $16)</em>
+            </small>
+          </p>
+        </div>
+        
 
         <!-- Paused button -->
         <button :disabled="true" v-if="isActivated && launchpadPaused" class="btn btn-primary">
