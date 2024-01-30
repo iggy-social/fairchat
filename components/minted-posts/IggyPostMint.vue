@@ -211,7 +211,7 @@ export default {
 
               const options = {
                 reply_to: this.post.stream_id, // important: reply_to needs to be filled out even if the reply is directly to the master post
-                body: "I have minted your post as NFT! 🎉", 
+                body: "I have minted your post as NFT! 🤝", 
                 context: this.getOrbisContext
               }
 
