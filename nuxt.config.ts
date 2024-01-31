@@ -82,7 +82,7 @@ export default defineNuxtConfig({
       marketplacePostNftItemUrl: "https://element.market/assets/zkfair/0x2F103ec022a1d99291077a082b2DC24C734E58A3/", // url (append nft id to it)
       marketplaceNftCollectionBaseUrl: "https://element.market/assets/zkfair/", // url (append nft address to it)
       newsletterLink: "",
-      nftDefaultRatio: 1, // default ratio for the NFT price bonding curve
+      nftDefaultRatio: 1000, // default ratio for the NFT price bonding curve
       nftLaunchpadBondingAddress: "0x50045895e1983F39FDC149C9a5AC29C39BEA18fe", // NFT launchpad with bonding curve contract address
       nftLaunchpadLatestItems: 8, // number of latest NFTs to show in the NFT launchpad
       nftOrbisContext: "kjzl6cwe1jw146mnsaga8lpmyawk4j6zkatzokh2mimohwpbv0akwnr5jp9xybm", // Orbis context for NFT collection pages
