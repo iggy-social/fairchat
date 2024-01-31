@@ -120,7 +120,12 @@
           type="text" class="form-control" id="ratio" aria-describedby="ratioHelp" 
           v-model="ratio"
         />
-        <div id="ratioHelp" class="form-text">Leave at {{ $config.nftDefaultRatio }} unless you know what you're doing.</div>
+        <div id="ratioHelp" class="form-text">
+          Price for mint #1 will be {{ getLessDecimals(calculatePrice(2, ratio)) }} {{ $config.tokenSymbol }}, 
+          for mint #5 will be {{ getLessDecimals(calculatePrice(5, ratio)) }} {{ $config.tokenSymbol }},
+          for mint #15 will be {{ getLessDecimals(calculatePrice(15, ratio)) }} {{ $config.tokenSymbol }}, 
+          for mint #30 will be {{ getLessDecimals(calculatePrice(30, ratio)) }} {{ $config.tokenSymbol }}, etc.
+        </div>
       </div>
 
       <!-- Buttons div -->
@@ -146,7 +151,6 @@
           </p>
         </div>
         
-
         <!-- Paused button -->
         <button :disabled="true" v-if="isActivated && launchpadPaused" class="btn btn-primary">
           Paused
@@ -180,6 +184,7 @@ import ConnectWalletButton from "~/components/ConnectWalletButton.vue";
 import WaitingToast from "~/components/WaitingToast";
 import FileUploadModal from "~/components/storage/FileUploadModal.vue";
 import { useUserStore } from '~/store/user';
+import { getLessDecimals } from '~/utils/numberUtils';
 import { fetchReferrer } from '~/utils/storageUtils';
 
 export default {
@@ -251,6 +256,12 @@ export default {
   },
 
   methods: {
+    calculatePrice(nftId, ratio) {
+      const supply = Number(nftId) - 1;
+
+      return (((supply * (supply + 1) * (2 * supply + 1)) - ((supply - 1) * supply * (2 * (supply - 1) + 1))) * 10000 / 42069) * Number(ratio) / 31337;
+    },
+
     async createCollection() {
       this.waitingCreate = true;
 
@@ -405,9 +416,8 @@ export default {
           }
 
           const options = {
-            body: "I have launched a new NFT collection: " + this.cName + ". Check it out here 👇", 
-            context: this.$config.orbisContext,
-            tags: [{ "slug": "nfts", "title": "Memes & NFTs" }],
+            body: "I have launched a new NFT collection: " + this.cName + " <br /><br />Check it out here 👇", 
+            context: this.$config.chatChannels.general,
             data: {
               type: "nftCollectionCreated",
               authorAddress: String(this.address),
