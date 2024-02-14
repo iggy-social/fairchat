@@ -34,10 +34,13 @@
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" @click="mintPost" :disabled="!isActivated || waitingMint">
+        <button v-if="isSupportedChain" type="button" class="btn btn-primary" @click="mintPost" :disabled="!isActivated || waitingMint">
           <span v-if="waitingMint" class="spinner-border spinner-border-sm mx-1" role="status" aria-hidden="true"></span>
           Mint post for {{ postPrice }} {{ $config.tokenSymbol }}
         </button>
+
+        <!-- Switch Chain button -->
+        <SwitchChainButton v-if="isActivated && !isSupportedChain" :navbar="false" :dropdown="false" />
       </div>
     </div>
   </div>
@@ -49,11 +52,12 @@
 import { useEthers } from 'vue-dapp';
 import { ethers } from 'ethers';
 import { useToast } from "vue-toastification/dist/index.mjs";
+import SwitchChainButton from "~/components/SwitchChainButton.vue";
 import WaitingToast from "~/components/WaitingToast";
 import sanitizeHtml from 'sanitize-html';
 import { useUserStore } from '~/store/user';
-import { fetchReferrer } from '~/utils/storageUtils';
 import { getImageFromText, textLengthWithoutBlankCharacters } from '~/utils/textUtils';
+import { fetchReferrer } from '~/utils/storageUtils';
 
 export default {
   name: "IggyPostMint",
@@ -68,6 +72,10 @@ export default {
       textPreview: null,
       waitingMint: false
     }
+  },
+
+  components: {
+    SwitchChainButton
   },
 
   created() {
@@ -89,7 +97,15 @@ export default {
       } else {
         return this.$config.orbisContext;
       }
-    }
+    },
+
+    isSupportedChain() {
+      if (this.chainId === this.$config.supportedChainId) {
+        return true;
+      } else {
+        return false;
+      }
+    },
   },
 
   methods: {
@@ -221,11 +237,6 @@ export default {
                 options["master"] = this.post.stream_id;
               }
 
-              // if post has tags, add them to the options
-              if (this.post?.content?.tags) {
-                options["tags"] = this.post.content.tags;
-              }
-
               options["data"] = {
                 type: "mintedPost",
                 collectionAddress: this.$config.iggyPostAddress,
@@ -258,12 +269,12 @@ export default {
   },
 
   setup() {
-    const { address, isActivated, signer } = useEthers();
+    const { address, chainId, isActivated, signer } = useEthers();
     const toast = useToast();
     const userStore = useUserStore();
 
     return {
-      address, isActivated, signer, toast, userStore
+      address, chainId, isActivated, signer, toast, userStore
     }
   }
 }
